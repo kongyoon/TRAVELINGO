@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  
+  --color-duo-green: #58CC02;
+  --color-duo-green-dark: #46A302;
+  --color-duo-blue: #1CB0F6;
+  --color-duo-blue-dark: #1899D6;
+  --color-duo-yellow: #FFC800;
+  --color-duo-yellow-dark: #E5B400;
+  --color-duo-red: #FF4B4B;
+  --color-duo-red-dark: #D33131;
+  --color-duo-purple: #CE82FF;
+  
+  --color-bento-bg: #F7F7F7;
+  --color-bento-border: #E5E5E5;
+  --color-bento-text: #4B4B4B;
+  --color-bento-heading: #3C3C3C;
+}
+
+@layer base {
+  body {
+    @apply bg-bento-bg text-bento-text font-sans antialiased;
+  }
+}
+
+.bento-card {
+  @apply bg-white border-2 border-bento-border rounded-3xl p-6 transition-all;
+}
+
+.duo-button {
+  @apply relative inline-flex items-center justify-center px-6 py-3 font-black text-white transition-all duration-150 rounded-2xl active:translate-y-1 cursor-pointer select-none active:shadow-none;
+}
+
+.duo-button-green {
+  @apply bg-duo-green hover:bg-duo-green-dark;
+  box-shadow: 0 4px 0 0 #46A302;
+}
+
+.duo-button-blue {
+  @apply bg-duo-blue hover:bg-duo-blue-dark;
+  box-shadow: 0 4px 0 0 #1899D6;
+}
+
+.duo-button-outline {
+  @apply bg-white text-gray-400 border-2 border-bento-border hover:bg-gray-50;
+  box-shadow: 0 4px 0 0 #E5E5E5;
+}
